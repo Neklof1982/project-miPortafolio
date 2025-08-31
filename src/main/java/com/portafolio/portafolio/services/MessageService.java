@@ -46,14 +46,37 @@ public class MessageService {
     }
 
     /**
+     * Busca un mensaje por Id.
+     *
+     * @param id El Id del mensaje que se busca.
+     * @return El mensaje correspondiente al Id.
+     * @throws MessageNotFoundException Si no se encuentra el mensaje con el Id.
+     */
+    public Message getById(Long id) {
+
+        Optional<Message> optionalMessage = messageRepository.findById(id);
+
+        if (!optionalMessage.isPresent()) {
+            // Sino se encuetra mensaje lanzar exceptción personaliza
+            throw new MessageNotFoundException("Mensaje con ID " + id + " no encontrado");
+        }
+
+        // Obtener el mensaje del Optional
+        Message message = optionalMessage.get();
+
+        return messageRepository.save(message);
+    }
+
+    /**
      * Actualiza el estado de un mensaje existente.
      *
      * @param status El nuevo estado que se quiere asignar al mensaje.
      * @param id     El Id del mensaje a actualizar.
      * @return El mensaje con el estado actualizado.
+     * @throws MessageNotFoundException Si no se encuentra el mensaje con el Id.
      */
     @Transactional
-    public Message updateStatus(MessageStatus status, String id) {
+    public Message updateStatus(MessageStatus status, Long id) {
 
         // Obtener el mensaje por Id
         Optional<Message> optionalMessage = messageRepository.findById(id);

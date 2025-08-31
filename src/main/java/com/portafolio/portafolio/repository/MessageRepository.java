@@ -8,7 +8,12 @@ import com.portafolio.portafolio.entities.Message;
 import com.portafolio.portafolio.enums.MessageStatus;
 
 @Repository
-public interface MessageRepository extends JpaRepository<Message, String> {
+public interface MessageRepository extends JpaRepository<Message, Long> {
 
     List<Message> findByStatus(MessageStatus status);
+
+    List<Message> findByEmail(String email);
+
+    List<Message> findByContenidoContainingIgnoreCase(String contenido);
+
 }
