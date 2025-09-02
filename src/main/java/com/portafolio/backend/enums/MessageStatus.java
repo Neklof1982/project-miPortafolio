@@ -1,4 +1,4 @@
-package com.portafolio.portafolio.enums;
+package com.portafolio.backend.enums;
 
 public enum MessageStatus {
 

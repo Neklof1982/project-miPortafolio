@@ -1,8 +1,8 @@
-package com.portafolio.portafolio.dtos;
+package com.portafolio.backend.dtos;
 
 import java.time.LocalDateTime;
 
-import com.portafolio.portafolio.enums.MessageStatus;
+import com.portafolio.backend.enums.MessageStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

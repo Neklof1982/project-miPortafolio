@@ -1,4 +1,4 @@
-package com.portafolio.portafolio.controller;
+package com.portafolio.backend.controller;
 
 import java.util.List;
 
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.portafolio.portafolio.dtos.NewMessageDto;
-import com.portafolio.portafolio.entities.Message;
-import com.portafolio.portafolio.enums.MessageStatus;
-import com.portafolio.portafolio.repository.MessageRepository;
-import com.portafolio.portafolio.services.MessageService;
+import com.portafolio.backend.dtos.NewMessageDto;
+import com.portafolio.backend.entities.Message;
+import com.portafolio.backend.enums.MessageStatus;
+import com.portafolio.backend.repository.MessageRepository;
+import com.portafolio.backend.services.MessageService;
 
 /**
  * Controlador REST para manejar las solicitudes de mensajes.

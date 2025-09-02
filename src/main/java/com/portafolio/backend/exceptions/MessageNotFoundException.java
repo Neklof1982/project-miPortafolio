@@ -1,4 +1,4 @@
-package com.portafolio.portafolio.exceptions;
+package com.portafolio.backend.exceptions;
 
 public class MessageNotFoundException extends RuntimeException {
       // Constructor sin mensaje

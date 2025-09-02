@@ -1,8 +1,9 @@
-package com.portafolio.portafolio.entities;
+package com.portafolio.backend.entities;
 
 import java.time.LocalDateTime;
 
-import com.portafolio.portafolio.enums.MessageStatus;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.portafolio.backend.enums.MessageStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,7 +29,10 @@ public class Message {
     private String nombre;
     private String email;
     private String contenido;
-    private LocalDateTime fechaEnvio;
     private MessageStatus status;
+    
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+    private LocalDateTime fechaEnvio;
+    
 
 }

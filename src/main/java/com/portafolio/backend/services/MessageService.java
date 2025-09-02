@@ -1,4 +1,4 @@
-package com.portafolio.portafolio.services;
+package com.portafolio.backend.services;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -6,11 +6,11 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.portafolio.portafolio.dtos.NewMessageDto;
-import com.portafolio.portafolio.entities.Message;
-import com.portafolio.portafolio.enums.MessageStatus;
-import com.portafolio.portafolio.exceptions.MessageNotFoundException;
-import com.portafolio.portafolio.repository.MessageRepository;
+import com.portafolio.backend.dtos.NewMessageDto;
+import com.portafolio.backend.entities.Message;
+import com.portafolio.backend.enums.MessageStatus;
+import com.portafolio.backend.exceptions.MessageNotFoundException;
+import com.portafolio.backend.repository.MessageRepository;
 
 @Service
 @Transactional

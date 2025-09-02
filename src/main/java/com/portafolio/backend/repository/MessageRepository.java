@@ -1,11 +1,11 @@
-package com.portafolio.portafolio.repository;
+package com.portafolio.backend.repository;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.portafolio.portafolio.entities.Message;
-import com.portafolio.portafolio.enums.MessageStatus;
+import com.portafolio.backend.entities.Message;
+import com.portafolio.backend.enums.MessageStatus;
 
 @Repository
 public interface MessageRepository extends JpaRepository<Message, Long> {
